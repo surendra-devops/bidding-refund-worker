@@ -2,7 +2,8 @@
 
 const Queue = require('bull');
 const BalanceController = require('./controllers/external_API_controllers/balanceAPIControllers');
-const JWTVerify = require('./utils/jwtFunctions')
+const JWTVerify = require('./utils/jwtFunctions');
+const config = require('./config/config');
 
 
 const refundQueue = new Queue('refund_list', 'redis://127.0.0.1:6379');
